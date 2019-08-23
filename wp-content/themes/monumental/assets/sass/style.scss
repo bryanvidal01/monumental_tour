@@ -5,7 +5,7 @@ $orange : #ff6902;
 $pink : #fc4787;
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'effra';
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -29,7 +29,7 @@ img{
 			a{
 				display: block;
 				padding: 20px;
-				letter-spacing: .2em;
+				letter-spacing: .3em;
 				font-size: 12px;
 				font-weight: 500;
 				color: #FFF;
@@ -110,17 +110,17 @@ img{
 			.title-big{
 				font-size: 4.6vw;
 				text-transform: uppercase;
-				font-weight: 900;
+				font-weight: 600;
 				letter-spacing: 0vw;
 				margin-bottom: 10px;
 				line-height: .9;
 			}
 
 			.title-medium{
-				font-size: 1vw;
-				letter-spacing: .2em;
+				font-size: .9vw;
+				letter-spacing: .3em;
 				text-transform: uppercase;
-				font-weight: 300;
+				font-weight: 600;
 			}
 		}
 
@@ -135,7 +135,7 @@ img{
 				.date{
 					font-size: 1.8vw;
 					font-weight: 800;
-					letter-spacing: 0.3vw;
+					letter-spacing: 0.1vw;
 					margin-bottom: 10px;
 				}
 
@@ -201,7 +201,7 @@ img{
 
 .button{
 	display: inline-block;
-	letter-spacing: .2em;
+	letter-spacing: .3em;
 	font-size: 12px;
 	font-weight: 500;
 	color: #FFF;
