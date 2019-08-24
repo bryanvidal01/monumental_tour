@@ -31,24 +31,45 @@ $(document).ready(function() {
 
     moveBackground();
 
-    setTimeout(function(){
-        $('.loader').fadeOut();
+    // setTimeout(function(){
+    //     $('.loader').fadeOut();
 
 
-        var img = 0;
+    //     var img = 0;
 
-        setInterval(function(){
-            jQuery('.item-galerie:nth-child(' + img + ') img').addClass('is-visible');
+    //     setInterval(function(){
+    //         jQuery('.item-galerie:nth-child(' + img + ') img').addClass('is-visible');
 
-            img ++;
+    //         img ++;
 
-        }, 100);
-    }, 1500);
+    //     }, 100);
+    // }, 1500);
 
+
+    jQuery('.newsletter-popin').click(function(event){
+        event.preventDefault();
+        $('.popin-newsletter').fadeIn();
+    });
+
+    jQuery('.close-popin').click(function(event){
+        event.preventDefault();
+        $('.popin-newsletter').fadeOut();
+    });
 
 });
 
 
 $(window).on('load', function(){
     //$('.loader').fadeOut();
+
+    $('.loader').fadeOut();
+
+
+	var img = 0;
+
+	setInterval(function(){
+		jQuery('.item-galerie:nth-child(' + img + ') img').addClass('is-visible');
+
+		img ++;
+	}, 100);
 });

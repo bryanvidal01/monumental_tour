@@ -7,7 +7,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jQuery.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/lightbox.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="icon" type="image/jpg" href="<?php echo get_template_directory_uri(); ?>/assets/images/icon.jpg" />
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700&display=swap" rel="stylesheet">
@@ -19,8 +19,7 @@
 <body <?php body_class(); ?>>
 
 <div class="loader">
-    <video src="<?php echo get_template_directory_uri(); ?>/assets/images/loader.mp4" autoplay></video>
-
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_monumental.svg" alt="">
     <i class="loading"></i>
 </div>
 
@@ -46,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="<?php echo get_site_url(); ?>/galerie/">
                             GALERIE
                         </a>
                     </li>
