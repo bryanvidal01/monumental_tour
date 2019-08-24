@@ -5,11 +5,13 @@
 <head>
     <link rel="stylesheet" href="https://use.typekit.net/xmq4mgz.css">
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jQuery.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/lightbox.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/jpg" href="<?php echo get_template_directory_uri(); ?>/assets/images/icon.jpg" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700&display=swap" rel="stylesheet">
+
 
     <?php wp_head(); ?>
 </head>

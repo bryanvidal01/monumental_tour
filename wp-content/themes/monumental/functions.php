@@ -76,12 +76,7 @@ add_action( 'init', 'add_posttype' );
 
 
 // Image Sizes
-add_image_size( 'client-logo', 850, 850, false );
-add_image_size( 'background', 2800, 1400, true );
-add_image_size( 'push-client', 570, 570, true );
-add_image_size( 'push-big-client', 1130, 680, true );
-add_image_size( 'head-page', 2800, 680, true );
-add_image_size( 'video-push', 1600, 1000, true );
+add_image_size( 'galerieSize', 400, 400, true );
 
 
 // Get Image

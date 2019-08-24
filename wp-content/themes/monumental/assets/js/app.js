@@ -33,7 +33,19 @@ $(document).ready(function() {
 
     setTimeout(function(){
         $('.loader').fadeOut();
-    }, 4000);
+
+
+        var img = 0;
+
+        setInterval(function(){
+            jQuery('.item-galerie:nth-child(' + img + ') img').addClass('is-visible');
+
+            img ++;
+
+        }, 100);
+    }, 1500);
+
+
 });
 
 

@@ -1,19 +1,41 @@
 @import 'bootstrap';
 @import 'reset';
+@import 'lightbox';
+
+
 $grey : #151616;
 $orange : #ff6902;
 $pink : #fc4787;
 
 body{
-	font-family: 'effra';
+	font-family: 'IBM Plex Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
+}
+
+body, html{
+	height: auto !important;
 }
 
 img{
 	display: block;
 }
+
+.title-page{
+	font-size: 6vw;
+	color: #FFF;
+	font-weight: 800;
+	text-transform: uppercase;
+	padding-top: 60px;
+}
+
 .header{
 	background: $grey;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 30;
+
 	.logo{
 		width: 210px;
 		padding: 17px 20px;
@@ -108,9 +130,9 @@ img{
 			}
 
 			.title-big{
-				font-size: 4.6vw;
+				font-size: 5.6vw;
 				text-transform: uppercase;
-				font-weight: 600;
+				font-weight: 900;
 				letter-spacing: 0vw;
 				margin-bottom: 10px;
 				line-height: .9;
@@ -158,6 +180,15 @@ img{
 }
 
 
+.content-site{
+	position: relative;
+	background: #000;
+	min-height: calc(100vh - 104px);
+	margin-top: 52px;
+	padding: 0 80px;
+	padding-bottom: 140px;
+}
+
 
 .footer{
 	background: $grey;
@@ -165,7 +196,7 @@ img{
 	padding: 20px;
 
 	&.homepage{
-		position: absolute;
+		position: fixed;
 		left: 0;
 		bottom: 0;
 	}
@@ -177,6 +208,41 @@ img{
 		color: #FFF;
 		text-transform: uppercase;
 	}
+}
+
+
+.galerie-container{
+	margin-top: 80px;
+}
+.item-galerie{
+	width: 25%;
+
+	img{
+		width: 100%;
+		filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		transition: .3s;
+
+		opacity: 0;
+
+
+		&:hover{
+			filter: grayscale(0%);
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+		}
+
+
+		&.is-visible{
+			opacity: 1;
+		}
+	}
+
 }
 
 .facebook-link{
