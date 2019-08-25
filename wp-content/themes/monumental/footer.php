@@ -1,12 +1,12 @@
         <footer class="footer homepage">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-6">
                         <a href="" class="facebook-link">
                             évènement facebook
                         </a>
                     </div>
-                    <div class="col-sm-6 text-right">
+                    <div class="col-6 text-right">
                         <a href="" class="newsletter-popin">
                             newsletter
                         </a>

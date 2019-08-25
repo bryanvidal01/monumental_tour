@@ -5,11 +5,9 @@ define('HOME_URL', get_home_url());
 
 define('AJAX_URL', THEME_URL . 'ajax-min.php');
 
-define('HOMEPAGE', get_field('homepage_page', 'option'));
-define('ARCHIVE_WEB', get_field('site_internet_page', 'option'));
-define('ARCHIVE_VIDEO', get_field('videos_page', 'option'));
-define('CONTACT', get_field('contact_page', 'option'));
-define('CLIENTS', get_field('clients_page', 'option'));
+define('GALERIE', get_field('page_galerie', 'option'));
+define('PRESENTATION', get_field('page_presentation', 'option'));
+define('PARTNERS', get_field('page_partners', 'option'));
 
 
 require_once( __DIR__ . '/inc/datatypes.php');
@@ -50,33 +48,12 @@ function checkUserConnect() {
 }
 
 
-// Post Type
-
-function add_posttype() {
-
-    $args = array(
-        'public' => true,
-        'label'  => 'Réalisations',
-        'has_archive'        => false,
-        'hierarchical'       => true,
-    );
-
-    register_post_type( 'realisations', $args );
-
-    $args = array(
-        'public' => true,
-        'label'  => 'Vidéos',
-        'has_archive'        => false,
-        'hierarchical'       => true,
-    );
-
-    register_post_type( 'videos', $args );
-}
-add_action( 'init', 'add_posttype' );
 
 
 // Image Sizes
 add_image_size( 'galerieSize', 400, 400, true );
+add_image_size( 'presentationPortraitSize', 1000, 1200, true );
+add_image_size( 'presentationPaysageSize', 1920, 1080, true );
 
 
 // Get Image

@@ -7,6 +7,10 @@ $grey : #151616;
 $orange : #ff6902;
 $pink : #fc4787;
 
+img{
+	max-width: 100%;
+}
+
 body{
 	font-family: 'IBM Plex Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -69,6 +73,64 @@ img{
 	padding-top: 60px;
 }
 
+.title-little{
+	font-size: 1.7vw;
+	color: #FFF;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.no-height{
+	position: static;
+}
+
+
+.text-presta{
+	height: 100%;
+	padding-left: 15px;
+}
+
+.contain-text{
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.image-presta{
+	position: relative;
+
+	&:before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		border: 3px solid;
+		border-image: linear-gradient($pink, $orange) 30;
+		position: absolute;
+		left: 15px;
+		top: 15px;
+	}
+}
+
+
+.text-presta{
+	.title-little{
+		margin-bottom: 15px;
+	}
+
+	.link{
+		margin-top: 20px;
+		display: inline-block;
+	}
+
+	p{
+		font-size: 1vw;
+	}
+}
+
+.presta-item{
+	margin-top: 50px;
+}
+
 .header{
 	background: $grey;
 	position: fixed;
@@ -80,6 +142,9 @@ img{
 	.logo{
 		width: 210px;
 		padding: 17px 20px;
+		max-width: none;
+		position: relative;
+		top: 1px;
 	}
 
 	.navigation-principal{
@@ -246,6 +311,7 @@ img{
 	&.homepage{
 		position: fixed;
 		left: 0;
+		z-index: 30;
 		bottom: 0;
 	}
 
@@ -256,6 +322,8 @@ img{
 		color: #FFF;
 		text-transform: uppercase;
 		transition: .3s;
+		position: relative;
+		top: -1px;
 
 		&:hover{
 			text-decoration: none;
@@ -266,7 +334,7 @@ img{
 
 
 .galerie-container{
-	margin-top: 80px;
+	margin-top: 62px;
 }
 .item-galerie{
 	width: 25%;
@@ -333,6 +401,7 @@ img{
 
 		&:hover{
 			background: linear-gradient(0.35turn, $orange, $pink);
+			color: #FFF !important;
 		}
 	}
 
@@ -347,7 +416,78 @@ img{
 }
 
 
+.text-project{
+	padding: 40px;
 
+	.button{
+		margin-top: 40px;
+	}
+
+}
+
+.container-video{
+	margin-left: -120px;
+	position: relative;
+	cursor: pointer;
+	margin-top: 15px;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 60px;
+		height: 60px;
+		z-index: 2;
+		background-size: contain;
+		background-image: url('../images/play.png');
+	}
+
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .7;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}
+
+	iframe{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+	}
+}
+
+.title-second{
+	font-size: 4vw;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+
+
+p{
+	color: #FFF;
+	font-size: 1.2vw;
+	line-height: 1.5;
+	opacity: .8;
+}
+
+
+
+
+.link{
+	color: #FFF;
+	font-size: 1.1vw;
+	font-weight: 800;
+}
 
 // Loader
 
@@ -420,4 +560,272 @@ html, body {
 		background-color: #ff6902;
 	}
 
+}
+
+
+.menu-burger{
+	width: 25px;
+	height: 35px;
+	right: 18px;
+	position: absolute;
+	top: 10px;
+	display: none;
+	&:before{
+		content: 'Navigation';
+		position: absolute;
+		right: 100%;
+		color: #FFF;
+		top: 11px;
+		margin-right: 10px;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: 800;
+	}
+
+	.barre{
+		width: 100%;
+		height: 2px;
+		background: $pink;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&:before, &:after{
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: $pink;
+			position: absolute;
+		}
+
+		&:before{
+			top: -6px;
+		}
+
+		&:after{
+			top: 6px;
+		}
+	}
+}
+
+
+
+// Responsive
+
+//Tablette
+
+@media screen and (max-width: 768px) {
+
+	.menu-burger{
+		display: block;
+	}
+
+	.loader{
+		box-shadow: none;
+
+		img{
+			max-width: 70%;
+		}
+	}
+
+	.header{
+		height: 56px;
+
+		.link-logo{
+			display: inline-block;
+		}
+
+		.navigation-principal{
+			position: fixed;
+			background: #222;
+			top: 55px;
+			width: 70%;
+			height: calc(100% - 100px);
+			right: 0;
+			transform: translate(100%, 0);
+			transition: .3s;
+
+			&.is-open{
+				transform: translate(0%, 0);
+			}
+
+			li{
+				display: block;
+				text-align: right;
+				border-bottom: 1px solid rgba(#111, .4);
+
+				a{
+					padding-right: 40px;
+				}
+			}
+		}
+
+		.logo{
+			padding: 17px 0;
+			width: 165px;
+			top: 3px;
+		}
+	}
+
+
+	.container-homepage{
+		.left-part{
+			width: 100%;
+			height: 60%;
+		}
+		.right-part{
+			width: 100%;
+			height: 40%;
+			bottom: 0;
+			top: auto;
+
+			.top-content{
+				padding: 15px;
+				text-align: center;
+
+				.claim{
+					width: 195px;
+					margin-bottom: 10px;
+					display: inline-block;
+				}
+
+				.title-big{
+					font-size: 39px;
+				}
+
+				.title-medium{
+					display: none;
+				}
+			}
+
+			.bottom-content{
+				text-align: center;
+				left: 0;
+				width: 100%;
+
+				.sup-info{
+					font-size: 9px;
+				}
+
+				.item-date{
+					margin-bottom: 15px;
+
+					.date{
+						font-size: 15px;
+						margin-bottom: 4px;
+					}
+					.location{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+
+	.footer{
+		padding: 18px 0;
+		height: 56px;
+		a{
+			font-size: 9px;
+		}
+		.facebook-link{
+			padding-left: 0;
+			&:before{
+				display: none;
+			}
+		}
+	}
+
+
+	.content-site{
+		padding: 0 10px;
+		padding-bottom: 68px;
+	}
+
+	.item-galerie{
+		width: 50%;
+	}
+
+	.title-page{
+		font-size: 36px;
+		padding-top: 30px;
+	}
+
+	.galerie-container{
+		margin-top: 30px;
+	}
+
+
+	.title-second{
+		font-size: 30px;
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+
+	.text-project{
+		padding: 15px;
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	.button{
+		display: block;
+		text-align: center;
+	}
+
+	.container-video{
+		margin-left: -30px;
+		width: calc(100% + 55px);
+	}
+
+	.contain-text{
+		top: 0;
+		transform: none;
+
+		.title-little{
+			margin-top: 30px;
+			margin-bottom: 7px;
+		}
+	}
+
+	.text-presta p{
+		font-size: 14px;
+	}
+
+	.text-presta .link{
+		font-size: 15px;
+	}
+
+	.title-little{
+		font-size: 24px;
+	}
+
+	.end-mobile{
+		margin-bottom: 20px;
+	}
+}
+
+
+@media screen and (max-width: 375px) {
+	.container-homepage .right-part{
+		height: 67%;
+	}
+	.container-homepage .left-part{
+		height: 33%;
+	}
+}
+
+
+
+@media screen and (max-width: 320px) {
+	.container-homepage .right-part{
+		height: 75%;
+	}
+	.container-homepage .left-part{
+		height: 25%;
+	}
 }
