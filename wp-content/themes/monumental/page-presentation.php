@@ -44,7 +44,7 @@ $artistes = get_field('artistes');
         <div class="row galerie-container">
             <div class="col-sm-5">
                 <?php if(isset($imagesPortraitURL) && $imagesPortraitURL != null): ?>
-                    <img src="<?php echo $imagesPortraitURL; ?>" width="100%" alt="">
+                    <img src="<?php echo $imagesPortraitURL; ?>" width="100%" class="full-mobile" alt="">
                 <?php endif; ?>
             </div>
             <div class="col-sm-7">
