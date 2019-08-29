@@ -7,6 +7,8 @@ get_header();
 
 $dates = get_field('date_homepage');
 
+$subTitle = get_field('sub_title_home');
+
 ?>
 
 <div class="container-homepage">
@@ -24,9 +26,12 @@ $dates = get_field('date_homepage');
                 Monumental <br/>
                 Tour
             </h1>
+
+            <?php if($subTitle): ?>
             <h2 class="title-medium">
-                L’électro au service du Patrimoine
+                <?php echo $subTitle; ?>
             </h2>
+            <?php endif; ?>
         </div>
 
         <?php if(!empty($dates) && $dates != null): ?>
@@ -49,7 +54,7 @@ $dates = get_field('date_homepage');
             <?php endforeach; ?>
 
 
-            <a href="" class="button gradient">
+            <a href="<?php echo get_field('url_invitations', 'option'); ?>" class="button gradient">
                 Infos & invitations
             </a>
 

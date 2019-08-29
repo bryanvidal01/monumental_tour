@@ -7,7 +7,7 @@ get_header();
 
 the_post();
 
-$partenaires = get_field('partners');
+$partenaires = get_field('contacts');
 
 ?>
     <div class="content-site contact" style="background-image: url('https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); ">
@@ -15,26 +15,29 @@ $partenaires = get_field('partners');
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <div class="title-page">
-                        Contact
+                        Contacts
                     </div>
                 </div>
             </div>
-            <div class="container-contact">
-                <div class="label-contact">
-                    Informations du projet
-                </div>
-                <a href="mailto:information@monumental-tour.fr" class="title-medium-contact-mail">
-                    information@monumental-tour.fr
-                </a>
 
+            <?php if(!empty($partenaires) && $partenaires): ?>
+
+            <div class="container-contact">
+
+                <?php foreach ($partenaires as $partenaire):
+                $label = $partenaire['label_contact'];
+                $email = $partenaire['email_contact'];
+                ?>
                 <div class="label-contact">
-                    Contact partenaires
+                    <?php echo $label; ?>
                 </div>
-                <a href="mailto:information@monumental-tour.fr" class="title-medium-contact-mail">
-                    partners@monumental-tour.fr
-            </div>
+                <a href="mailto:<?php echo $email; ?>" class="title-medium-contact-mail">
+                    <?php echo $email; ?>
+                </a>
+                <?php endforeach;?>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 
 

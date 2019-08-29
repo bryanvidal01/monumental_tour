@@ -33,12 +33,12 @@ $(document).ready(function() {
 
     jQuery('.newsletter-popin').click(function(event){
         event.preventDefault();
-        $('.popin-newsletter').fadeIn();
+        $('.popin-newsletter').addClass('is-open');
     });
 
     jQuery('.close-popin').click(function(event){
         event.preventDefault();
-        $('.popin-newsletter').fadeOut();
+        $('.popin-newsletter').removeClass('is-open');
     });
 
     jQuery('.has_video').click(function(){

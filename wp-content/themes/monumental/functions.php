@@ -8,6 +8,7 @@ define('AJAX_URL', THEME_URL . 'ajax-min.php');
 define('GALERIE', get_field('page_galerie', 'option'));
 define('PRESENTATION', get_field('page_presentation', 'option'));
 define('PARTNERS', get_field('page_partners', 'option'));
+define('CONTACT', get_field('page_contact', 'option'));
 
 
 require_once( __DIR__ . '/inc/datatypes.php');
@@ -61,8 +62,15 @@ function lsd_get_thumb($id, $size){
     if(empty($size)){
         $size = 'medium';
     }
+
     if($id){
         $img = wp_get_attachment_image_src($id, $size);
+        $extension = substr($img[0],strrpos($img[0],'.')+1);
+
+        if($extension == 'gif' || $extension == 'GIF'):
+            $img = wp_get_attachment_image_src($id, 'full');
+        endif;
+
         $imgUrl = reset($img);
 
         return $imgUrl;

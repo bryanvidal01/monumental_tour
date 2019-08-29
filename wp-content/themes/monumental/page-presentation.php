@@ -19,6 +19,9 @@ if($imagesPaysage != null):
     $imagesPaysageURL = lsd_get_thumb($imagesPaysage, 'presentationPaysageSize');
 endif;
 
+$buttonLabel = get_field('label_button_presentation');
+$buttonUrl = get_field('link_button_presentation');
+
 $titleDescription = get_field('title_description');
 $descriptionProject = get_field('description_project');
 $youtubeUrl = get_field('youtube_url');
@@ -29,6 +32,7 @@ endif;
 
 
 $artistes = get_field('artistes');
+
 
 
 ?>
@@ -58,9 +62,11 @@ $artistes = get_field('artistes');
                         <?php echo $descriptionProject; ?>
                     <?php endif; ?>
 
-                    <a href="" class="button gradient">
-                        Faire un don
-                    </a>
+                    <?php if($buttonLabel && $buttonUrl): ?>
+                        <a href="<?php echo $buttonUrl; ?>" class="button gradient">
+                            <?php echo $buttonLabel; ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
 
 

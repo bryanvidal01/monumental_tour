@@ -65,6 +65,44 @@
             "delay": 0
         },
         {
+            "key": "field_5d667161f92b1",
+            "label": "Label du bouton",
+            "name": "label_button_presentation",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d66717df92b2",
+            "label": "Lien du bouton",
+            "name": "link_button_presentation",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d61d1b1e2ebd",
             "label": "Image de la preview vidéo",
             "name": "image_preview_video",
@@ -243,5 +281,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566693815
+    "modified": 1566994827
 }

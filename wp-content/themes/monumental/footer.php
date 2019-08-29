@@ -2,7 +2,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6">
-                        <a href="" class="facebook-link">
+                        <a href="<?php echo get_field('url_event_facebook', 'option'); ?>" target="_blank" class="facebook-link">
                             évènement facebook
                         </a>
                     </div>

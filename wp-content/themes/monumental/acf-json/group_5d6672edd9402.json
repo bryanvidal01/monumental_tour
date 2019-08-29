@@ -1,30 +1,11 @@
 {
-    "key": "group_5d5f31857b491",
-    "title": "Page d'accueil",
+    "key": "group_5d6672edd9402",
+    "title": "Contact",
     "fields": [
         {
-            "key": "field_5d667756ad167",
-            "label": "Titre sous Monumental Tour",
-            "name": "sub_title_home",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d5f318dbcd6d",
-            "label": "Dates à afficher",
-            "name": "date_homepage",
+            "key": "field_5d6672f065e6d",
+            "label": "Contacts",
+            "name": "contacts",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -41,9 +22,9 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5d5f31a4bcd6e",
-                    "label": "Date",
-                    "name": "date",
+                    "key": "field_5d6672fa65e6e",
+                    "label": "Label du contact",
+                    "name": "label_contact",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -60,9 +41,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5d5f31acbcd6f",
-                    "label": "Lieu",
-                    "name": "location",
+                    "key": "field_5d66730665e6f",
+                    "label": "Email Contact",
+                    "name": "email_contact",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -84,9 +65,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_template",
                 "operator": "==",
-                "value": "front-page.php"
+                "value": "page-contact.php"
             }
         ]
     ],
@@ -98,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566996348
+    "modified": 1566995237
 }

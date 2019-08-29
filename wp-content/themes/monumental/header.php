@@ -44,11 +44,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            INVITATIONS
-                        </a>
-                    </li>
-                    <li>
                         <a href="<?php echo get_the_permalink(GALERIE); ?>">
                             GALERIE
                         </a>
@@ -59,13 +54,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="<?php echo get_the_permalink(CONTACT); ?>">
                             CONTACT
                         </a>
                     </li>
                     <li>
-                        <a href="" class="button gradient">
-                            Faire un don
+                        <a href="<?php echo get_field('url_invitations', 'option'); ?>" class="button gradient" target="_blank">
+                            INVITATIONS
                         </a>
                     </li>
                 </ul>
